@@ -1,0 +1,4 @@
+media/
+.venv/
+**/.DS_STORE
+scenes/__pycache__/

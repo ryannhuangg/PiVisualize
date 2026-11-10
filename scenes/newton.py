@@ -1,0 +1,76 @@
+from manim import *
+
+
+class Newton(MovingCameraScene):
+    def construct(self):
+        f = lambda x: x**2 - 2 # function
+        df = lambda x: 2 * x # derivative of func
+
+        title = Tex("Newton's Method").to_edge(UP, buff=0.4)
+        self.play(Write(title))
+        self.wait(1)
+
+        axes = Axes(
+            x_range=[-0.5, 3, 1],
+            y_range=[-3, 4, 1],
+            x_length=7,
+            y_length=5,
+            tips=False,
+        ).center()
+        graph = axes.plot(f, x_range=[-0.5, 2.3], color=BLUE)
+        label = MathTex("f(x)=x^2-2", color=BLUE).scale(0.8).next_to(axes, UP, buff=0.2)
+        self.play(Create(axes), Create(graph), Write(label)) # creation of axis
+
+        def step(x, i, hi=0.3):
+            s = self.camera.frame.width / config.frame_width
+            dot = Dot(axes.c2p(x, 0), radius=0.08 * s, color=WHITE)
+            dot_label = MathTex(f"x_{i}").scale(0.7 * s).next_to(dot, DOWN, buff=0.15 * s)
+            vline = DashedLine(axes.c2p(x, 0), axes.c2p(x, f(x)), dash_length=0.05 * s, stroke_width=4 * s, color=WHITE)
+            point = Dot(axes.c2p(x, f(x)), radius=0.08 * s, color=WHITE)
+            tan = axes.plot(lambda t: f(x) + df(x) * (t - x), x_range=[x - 0.6, x + hi], color=PURPLE)
+            self.play(FadeIn(dot), Write(dot_label))
+            self.play(Create(vline), FadeIn(point))
+            self.play(Create(tan))
+
+        x0 = 2.0
+        step(x0, 0)
+
+        self.play(
+            self.camera.frame.animate.scale(0.4).move_to(axes.c2p(1.75, 0.8)),
+            run_time=2,
+        )
+
+        x1 = x0 - f(x0) / df(x0)
+        step(x1, 1, hi=0.6)
+
+        self.play(
+            self.camera.frame.animate.scale(0.25).move_to(axes.c2p(1.46, 0.12)),
+            run_time=2,
+        )
+
+        x2 = x1 - f(x1) / df(x1)
+        s = self.camera.frame.width / config.frame_width
+        dotfinal = Dot(axes.c2p(x2, 0), radius=0.12 * s, color=WHITE)
+        dotfinal_label = MathTex(r"x_2 \approx \sqrt{2}").scale(0.9 * s).next_to(dotfinal, UL, buff=0.1 * s)
+        self.play(Create(dotfinal), Write(dotfinal_label))
+        self.wait(1)
+
+
+class NewtonDerivation(Scene):
+    def construct(self):
+        eq1 = MathTex("y", "-", "f(x_n)", "=", "f'(x_n)", "(", "x", "-", "x_n", ")")
+        eq2 = MathTex("0", "-", "f(x_n)", "=", "f'(x_n)", "(", "x_{n+1}", "-", "x_n", ")")
+        eq3 = MathTex("-", "{f(x_n) \\over f'(x_n)}", "=", "x_{n+1}", "-", "x_n")
+        eq4 = MathTex("x_{n+1}", "=", "x_n", "-", "{f(x_n) \\over f'(x_n)}")
+        for e in (eq1, eq2, eq3, eq4):
+            e.scale(0.8)
+
+
+        self.play(Write(eq1))
+        self.wait()
+        self.play(TransformMatchingTex(eq1, eq2))
+        self.wait()
+        self.play(TransformMatchingTex(eq2, eq3))
+        self.wait()
+        self.play(TransformMatchingTex(eq3, eq4))
+        self.wait(2)
