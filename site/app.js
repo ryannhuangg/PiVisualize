@@ -66,7 +66,7 @@ function render() {
   if (k === lastK) return;
   lastK = k;
   $("stepcount").textContent = `${k + 1} of ${steps.length}`;
-  $("subtitle").textContent = k < 0 ? "Press Start to begin" : `Step ${k + 1} / ${steps.length} | ${steps[k].label}`;
+  $("subtitle").textContent = k < 0 ? "" : `Step ${k + 1} / ${steps.length} | ${steps[k].label}`;
   current.cards.forEach((c, i) => {
     const el = $("cards").children[i].querySelector(".value");
     const v = k < 0 ? (c.math ? "\\text{—}" : "—") : steps[k].values[i];
@@ -82,8 +82,9 @@ function load(id) {
   video.pause();
   video.src = current.video;
   setRate();
-  $("title").textContent = current.title;
-  document.title = current.title;
+  const heading = current.heading || current.title;
+  $("title").textContent = heading;
+  document.title = heading;
   const d = current.discussion;
   $("discussion").hidden = !d;
   $("d-title").textContent = d?.title || "";

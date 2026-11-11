@@ -1,8 +1,8 @@
 {
   "newton": {
     "group": "newton",
-    "title": "Newton's Method",
-    "video": "videos/Newton.mp4",
+    "title": "Roots",
+    "video": "videos/NewtonEx1.mp4",
     "cards": [
       {
         "label": "Current guess",
@@ -33,7 +33,7 @@
     ],
     "steps": [
       {
-        "t": 3,
+        "t": 1,
         "label": "Pick x₀ = 2",
         "values": [
           "x_0 = 2",
@@ -43,7 +43,7 @@
         ]
       },
       {
-        "t": 4,
+        "t": 2.3,
         "label": "Evaluate f(x₀)",
         "values": [
           "x_0 = 2",
@@ -53,8 +53,18 @@
         ]
       },
       {
-        "t": 5,
-        "label": "x₀'s tangent = 0 at x₁",
+        "t": 3.1,
+        "label": "Draw tangent at x₀",
+        "values": [
+          "x_0 = 2",
+          "f(x_0) = 2",
+          "f'(x_0) = 4",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 6,
+        "label": "Find zero of tangent line",
         "values": [
           "x_0 = 2",
           "f(x_0) = 2",
@@ -63,17 +73,7 @@
         ]
       },
       {
-        "t": 8,
-        "label": "Move to x₁ = 1.5",
-        "values": [
-          "x_1 = 1.5",
-          "\\text{—}",
-          "\\text{—}",
-          "\\text{—}"
-        ]
-      },
-      {
-        "t": 9,
+        "t": 7.3,
         "label": "Evaluate f(x₁)",
         "values": [
           "x_1 = 1.5",
@@ -83,8 +83,18 @@
         ]
       },
       {
-        "t": 10,
-        "label": "x₁'s tangent = 0 at x₂",
+        "t": 8.2,
+        "label": "Draw tangent at x₁",
+        "values": [
+          "x_1 = 1.5",
+          "f(x_1) = 0.25",
+          "f'(x_1) = 3",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 11,
+        "label": "Find zero of tangent line",
         "values": [
           "x_1 = 1.5",
           "f(x_1) = 0.25",
@@ -93,7 +103,7 @@
         ]
       },
       {
-        "t": 14,
+        "t": 12,
         "label": "x₂ ≈ √2 (true value 1.41421…)",
         "values": [
           "x_2 \\approx \\sqrt{2}",
@@ -107,7 +117,149 @@
       "title": "Newton's Method",
       "subtitle": "Approximation Methods: Root-Finding",
       "text": "Newton's method finds a solution of $f(x) = 0$ by repeatedly creating tangent lines, replacing the current guess $x_n$ with the point where the tangent line at $x_n$ crosses the x-axis, $x_{n+1}$. For \"nice\" functions where $f'(x) \\neq 0$, Newton's method will find a root of $f(x)$."
-    }
+    },
+    "heading": "Newton's Method: Roots"
+  },
+  "newton2": {
+    "group": "newton",
+    "title": "Intersections",
+    "video": "videos/NewtonEx2.mp4",
+    "cards": [
+      {
+        "label": "Current guess",
+        "math": true
+      },
+      {
+        "label": "f(guess)",
+        "math": true
+      },
+      {
+        "label": "Slope f'(guess)",
+        "math": true
+      },
+      {
+        "label": "Next guess",
+        "math": true
+      }
+    ],
+    "legend": [
+      {
+        "color": "#72a0ff",
+        "name": "f(x)"
+      },
+      {
+        "color": "#7260d6",
+        "name": "Tangent line"
+      }
+    ],
+    "steps": [
+      {
+        "t": 3,
+        "label": "Plot h(x) = cos(x)",
+        "values": [
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 5,
+        "label": "Plot g(x) = x",
+        "values": [
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 8,
+        "label": "Create auxiliary function f(x)",
+        "values": [
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 10,
+        "label": "Pick x₀ = 0.5",
+        "values": [
+          "x_0 = 0.5",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 11.4,
+        "label": "Evaluate f(x₀)",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) \\approx 0.378",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 12.1,
+        "label": "Draw tangent at x₀",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) \\approx 0.378",
+          "f'(x_0) \\approx -1.479",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 15.1,
+        "label": "Find zero of tangent line",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) \\approx 0.378",
+          "f'(x_0) \\approx -1.479",
+          "x_1 \\approx 0.755"
+        ]
+      },
+      {
+        "t": 17,
+        "label": "Draw tangent at x₁",
+        "values": [
+          "x_1 \\approx 0.755",
+          "f(x_1) \\approx -0.027",
+          "f'(x_1) \\approx -1.685",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 20,
+        "label": "Find zero of tangent line",
+        "values": [
+          "x_1 \\approx 0.755",
+          "f(x_1) \\approx -0.027",
+          "f'(x_1) \\approx -1.685",
+          "x_2 \\approx 0.739"
+        ]
+      },
+      {
+        "t": 21,
+        "label": "x₂ ≈ 0.739",
+        "values": [
+          "x_2 \\approx 0.739",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      }
+    ],
+    "discussion": {
+      "title": "Newton's Method",
+      "subtitle": "Finding Intersections",
+      "text": "To find where $h(x) = \\cos(x)$ and $g(x) = x$ intersect, we define an auxiliary function $f(x) = \\cos(x) - x$. The roots of $f(x)$ correspond to the intersections of $h(x)$ and $g(x)$."
+    },
+    "heading": "Newton's Method: Intersections"
   },
   "newton-derivation": {
     "group": "newton-derivation",
