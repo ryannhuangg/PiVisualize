@@ -1,0 +1,109 @@
+{
+  "newton": {
+    "title": "Newton's Method",
+    "video": "videos/Newton.mp4",
+    "cards": [
+      { "label": "Current guess", "math": true },
+      { "label": "f(guess)", "math": true },
+      { "label": "Slope f'(guess)", "math": true },
+      { "label": "Next guess", "math": true }
+    ],
+    "legend": [
+      { "color": "#58C4DD", "name": "f(x)" },
+      { "color": "#9A72AC", "name": "Tangent line" },
+      { "color": "#FFFFFF", "name": "Guess and its point on the curve" }
+    ],
+    "formula": "x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}",
+    "description": "Each guess is where the tangent line at the previous guess crosses the x-axis.",
+    "steps": [
+      {
+        "t": 0,
+        "label": "Newton's method for f(x) = x² − 2",
+        "values": ["\\text{—}", "\\text{—}", "\\text{—}", "\\text{—}"]
+      },
+      {
+        "t": 2,
+        "label": "Plot f(x) = x² − 2",
+        "values": ["\\text{—}", "\\text{—}", "\\text{—}", "\\text{—}"]
+      },
+      {
+        "t": 3,
+        "label": "Pick a starting guess x₀ = 2",
+        "values": ["x_0 = 2", "\\text{—}", "\\text{—}", "\\text{—}"]
+      },
+      {
+        "t": 4,
+        "label": "Evaluate f(x₀)",
+        "values": ["x_0 = 2", "f(x_0) = 2", "\\text{—}", "\\text{—}"]
+      },
+      {
+        "t": 5,
+        "label": "The tangent at x₀ crosses the axis at x₁",
+        "values": ["x_0 = 2", "f(x_0) = 2", "f'(x_0) = 4", "x_1 = 2 - \\frac{2}{4} = 1.5"]
+      },
+      {
+        "t": 6,
+        "label": "Zoom in on the crossing",
+        "values": ["x_0 = 2", "f(x_0) = 2", "f'(x_0) = 4", "x_1 = 2 - \\frac{2}{4} = 1.5"]
+      },
+      {
+        "t": 8,
+        "label": "Move to x₁ = 1.5",
+        "values": ["x_1 = 1.5", "\\text{—}", "\\text{—}", "\\text{—}"]
+      },
+      {
+        "t": 9,
+        "label": "Evaluate f(x₁)",
+        "values": ["x_1 = 1.5", "f(x_1) = 0.25", "\\text{—}", "\\text{—}"]
+      },
+      {
+        "t": 10,
+        "label": "The tangent at x₁ crosses the axis at x₂",
+        "values": ["x_1 = 1.5", "f(x_1) = 0.25", "f'(x_1) = 3", "x_2 = 1.5 - \\frac{0.25}{3} \\approx 1.41667"]
+      },
+      {
+        "t": 11,
+        "label": "Zoom in again",
+        "values": ["x_1 = 1.5", "f(x_1) = 0.25", "f'(x_1) = 3", "x_2 = 1.5 - \\frac{0.25}{3} \\approx 1.41667"]
+      },
+      {
+        "t": 13,
+        "label": "x₂ ≈ √2 (true value 1.41421…)",
+        "values": ["x_2 \\approx 1.41667", "f(x_2) \\approx 0.0069", "f'(x_2) \\approx 2.83", "x_3 \\approx 1.41422"]
+      }
+    ]
+  },
+  "newton-derivation": {
+    "title": "Newton's Method: Derivation",
+    "video": "videos/NewtonDerivation.mp4",
+    "cards": [
+      { "label": "Equation", "math": true },
+      { "label": "Operation", "math": false }
+    ],
+    "legend": [],
+    "formula": "",
+    "description": "Start from the tangent line and solve for where it crosses the x-axis.",
+    "steps": [
+      {
+        "t": 0,
+        "label": "Tangent line at xₙ",
+        "values": ["y - f(x_n) = f'(x_n)(x - x_n)", "Point-slope form of the tangent at xₙ"]
+      },
+      {
+        "t": 3,
+        "label": "Set y = 0 and x = xₙ₊₁",
+        "values": ["0 - f(x_n) = f'(x_n)(x_{n+1} - x_n)", "The next guess is where the tangent crosses the x-axis"]
+      },
+      {
+        "t": 5,
+        "label": "Divide by f′(xₙ)",
+        "values": ["-\\frac{f(x_n)}{f'(x_n)} = x_{n+1} - x_n", "Divide both sides by f′(xₙ)"]
+      },
+      {
+        "t": 7,
+        "label": "Add xₙ to both sides",
+        "values": ["x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}", "Add xₙ to both sides to get Newton's update rule"]
+      }
+    ]
+  }
+}
