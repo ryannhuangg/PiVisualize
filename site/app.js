@@ -3,12 +3,23 @@ const video = $("video");
 let data = {};
 let current = null;
 let steps = [];
-let lastK = -1;
+let lastK = -2;
 
 const tex = (el, s) => katex.render(s, el, { throwOnError: false, strict: false });
 
+const rich = (el, s) => {
+  el.textContent = "";
+  s.split(/\$(.+?)\$/g).forEach((part, i) => {
+    if (i % 2) {
+      const m = document.createElement("span");
+      tex(m, part);
+      el.append(m);
+    } else el.append(part);
+  });
+};
+
 const stepIndex = (t) => {
-  let k = 0;
+  let k = -1;
   steps.forEach((s, i) => {
     if (s.t <= t + 0.05) k = i;
   });
@@ -54,28 +65,33 @@ function render() {
   const k = stepIndex(video.currentTime);
   if (k === lastK) return;
   lastK = k;
-  const step = steps[k];
-  $("status").textContent = `Step: ${k + 1} / ${steps.length} | ${step.label}`;
-  $("stepcount").textContent = `Step ${k + 1} of ${steps.length}`;
+  $("stepcount").textContent = `${k + 1} of ${steps.length}`;
+  $("subtitle").textContent = k < 0 ? "Press Start to begin" : `Step ${k + 1} / ${steps.length} | ${steps[k].label}`;
   current.cards.forEach((c, i) => {
     const el = $("cards").children[i].querySelector(".value");
-    if (c.math) tex(el, step.values[i]);
-    else el.textContent = step.values[i];
+    const v = k < 0 ? (c.math ? "\\text{—}" : "—") : steps[k].values[i];
+    if (c.math) tex(el, v);
+    else el.textContent = v;
   });
 }
 
 function load(id) {
   current = data[id];
   steps = current.steps;
-  lastK = -1;
+  lastK = -2;
   video.pause();
   video.src = current.video;
   setRate();
   $("title").textContent = current.title;
   document.title = current.title;
-  if (current.formula) tex($("formula"), current.formula);
-  else $("formula").textContent = "";
-  $("description").textContent = current.description || "";
+  const d = current.discussion;
+  $("discussion").hidden = !d;
+  $("d-title").textContent = d?.title || "";
+  $("d-sub").textContent = d?.subtitle || "";
+  rich($("d-text"), d?.text || "");
+  $("d-code").hidden = !d?.code;
+  $("d-pre").textContent = d?.code || "";
+  $("copy").textContent = "Copy";
   buildCards();
   buildLegend();
   render();
@@ -84,10 +100,10 @@ function load(id) {
 function go(delta) {
   const cur = stepIndex(video.currentTime);
   let k = cur + delta;
-  if (delta < 0 && video.currentTime - steps[cur].t > 0.3) k = cur;
-  k = Math.min(Math.max(k, 0), steps.length - 1);
+  if (delta < 0 && cur >= 0 && video.currentTime - steps[cur].t > 0.3) k = cur;
+  k = Math.min(Math.max(k, -1), steps.length - 1);
   video.pause();
-  video.currentTime = steps[k].t;
+  video.currentTime = k < 0 ? 0 : steps[k].t;
 }
 
 function tick() {
@@ -123,6 +139,11 @@ $("reset").addEventListener("click", () => {
 $("prev").addEventListener("click", () => go(-1));
 $("next").addEventListener("click", () => go(1));
 $("speed").addEventListener("change", setRate);
+
+$("copy").addEventListener("click", () => {
+  navigator.clipboard.writeText($("d-pre").textContent);
+  $("copy").textContent = "Copied";
+});
 
 $("progress").addEventListener("click", (e) => {
   const r = e.currentTarget.getBoundingClientRect();

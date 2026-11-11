@@ -1,5 +1,8 @@
 from manim import *
 
+CURVE = "#4a6ae0"
+TANGENT = "#7260d6"
+
 
 class Newton(MovingCameraScene):
     def construct(self):
@@ -17,8 +20,8 @@ class Newton(MovingCameraScene):
             y_length=5,
             tips=False,
         ).center()
-        graph = axes.plot(f, x_range=[-0.5, 2.3], color=BLUE)
-        label = MathTex("f(x)=x^2-2", color=BLUE).scale(0.8).next_to(axes, UP, buff=0.2)
+        graph = axes.plot(f, x_range=[-0.5, 2.3], color=CURVE)
+        label = MathTex("f(x)=x^2-2", color=CURVE).scale(0.8).next_to(axes, UP, buff=0.2)
         self.play(Create(axes), Create(graph), Write(label)) # creation of axis
 
         def step(x, i, hi=0.3):
@@ -27,7 +30,7 @@ class Newton(MovingCameraScene):
             dot_label = MathTex(f"x_{i}").scale(0.7 * s).next_to(dot, DOWN, buff=0.15 * s)
             vline = DashedLine(axes.c2p(x, 0), axes.c2p(x, f(x)), dash_length=0.05 * s, stroke_width=4 * s, color=WHITE)
             point = Dot(axes.c2p(x, f(x)), radius=0.08 * s, color=WHITE)
-            tan = axes.plot(lambda t: f(x) + df(x) * (t - x), x_range=[x - 0.6, x + hi], color=PURPLE)
+            tan = axes.plot(lambda t: f(x) + df(x) * (t - x), x_range=[x - 0.6, x + hi], color=TANGENT)
             self.play(FadeIn(dot), Write(dot_label))
             self.play(Create(vline), FadeIn(point))
             self.play(Create(tan))
