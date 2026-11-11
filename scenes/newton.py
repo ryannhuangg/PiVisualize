@@ -4,14 +4,10 @@ CURVE = "#4a6ae0"
 TANGENT = "#7260d6"
 
 
-class Newton(MovingCameraScene):
+class NewtonEx1(MovingCameraScene):
     def construct(self):
         f = lambda x: x**2 - 2 # function
         df = lambda x: 2 * x # derivative of func
-
-        title = Tex("Newton's Method").to_edge(UP, buff=0.4)
-        self.play(Write(title))
-        self.wait(1)
 
         axes = Axes(
             x_range=[-0.5, 3, 1],
@@ -58,6 +54,28 @@ class Newton(MovingCameraScene):
         self.play(Create(dotfinal), Write(dotfinal_label))
         self.wait(1)
 
+class NewtonEx2(MovingCameraScene):
+    def construct(self):
+        h = lambda x: np.cos(x)
+        g = lambda x: x
+        f = lambda x: np.cos(x) - x
+        df = lambda x: -1 * np.sin(x) - 1
+
+        axes = Axes(
+            x_range = [-0.5, 3, 1],
+            y_range = [-1, 3, 1],
+            x_length = 7,
+            y_length = 5,
+            tips = False,
+        ).center()
+
+        hgraph = axes.plot(h, x_range=[-0.5, 2.5], color = CURVE)
+        ggraph = axes.plot(g, x_range=[-0.5, 2.5], color = CURVE)
+        fgraph = axes.plot(f, x_range=[-0.5, 2.5], color = CURVE)
+        hlabel = MathTex("h(x) = cos(x)", color=CURVE).scale(.8).next_to(ggraph, UP, buff=.2)
+
+
+        self.play(Create(axes), Create(hgraph), Write(hlabel))
 
 class NewtonDerivation(Scene):
     def construct(self):

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math Derivations</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">Math Derivations</a>
+  <nav>
+    <div class="menu">
+      <button>Single Variable</button>
+      <div class="menu-items">
+        <a href="derivation.html?id=newton">Newton's Method</a>
+        <a href="derivation.html?id=newton-derivation">Newton's Method: Derivation</a>
+      </div>
+    </div>
+    <div class="menu">
+      <button>Multivariable</button>
+      <div class="menu-items">
+        <a class="soon" href="#">Cylindrical Coordinates</a>
+        <a class="soon" href="#">Spherical Coordinates</a>
+      </div>
+    </div>
+    <div class="menu">
+      <button>Geometry</button>
+      <div class="menu-items">
+        <a class="soon" href="#">Pythagorean Theorem</a>
+        <a class="soon" href="#">Law of Cosines</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="card">
+    <h1 id="title"></h1>
+    <p id="subtitle" class="subtitle"></p>
+    <div class="controls">
+      <label>Function <select id="animation"></select></label>
+      <label>Speed
+        <select id="speed">
+          <option value="0.5">Slow</option>
+          <option value="1" selected>Medium</option>
+          <option value="2">Fast</option>
+        </select>
+      </label>
+      <button id="start" class="primary">Start</button>
+      <button id="reset">Reset</button>
+    </div>
+    <div class="stepnav">
+      <button id="prev" aria-label="Previous step">&#8249;</button>
+      <div id="stepcount" class="stepcount">0 of 0</div>
+      <button id="next" aria-label="Next step">&#8250;</button>
+    </div>
+    <div class="stage"><video id="video" playsinline preload="auto"></video></div>
+    <div id="cards" class="cards"></div>
+    <div id="legend" class="legend"></div>
+    <div id="progress" class="progress"><div id="bar"></div></div>
+  </section>
+  <section id="discussion" class="discussion">
+    <h2 id="d-title"></h2>
+    <div id="d-sub" class="sub"></div>
+    <p id="d-text"></p>
+    <div id="d-code" class="code">
+      <button id="copy">Copy</button>
+      <pre><code id="d-pre"></code></pre>
+    </div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

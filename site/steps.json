@@ -1,5 +1,6 @@
 {
   "newton": {
+    "group": "newton",
     "title": "Newton's Method",
     "video": "videos/Newton.mp4",
     "cards": [
@@ -109,6 +110,7 @@
     }
   },
   "newton-derivation": {
+    "group": "newton-derivation",
     "title": "Newton's Method: Derivation",
     "video": "videos/NewtonDerivation.mp4",
     "cards": [
