@@ -33,7 +33,7 @@
     ],
     "steps": [
       {
-        "t": 1,
+        "t": 2.02,
         "label": "Pick x₀ = 2",
         "values": [
           "x_0 = 2",
@@ -43,7 +43,7 @@
         ]
       },
       {
-        "t": 2.3,
+        "t": 2.97,
         "label": "Evaluate f(x₀)",
         "values": [
           "x_0 = 2",
@@ -53,7 +53,7 @@
         ]
       },
       {
-        "t": 3.1,
+        "t": 3.95,
         "label": "Draw tangent at x₀",
         "values": [
           "x_0 = 2",
@@ -63,7 +63,7 @@
         ]
       },
       {
-        "t": 6,
+        "t": 7.03,
         "label": "Find zero of tangent line",
         "values": [
           "x_0 = 2",
@@ -73,7 +73,7 @@
         ]
       },
       {
-        "t": 7.3,
+        "t": 7.82,
         "label": "Evaluate f(x₁)",
         "values": [
           "x_1 = 1.5",
@@ -83,7 +83,7 @@
         ]
       },
       {
-        "t": 8.2,
+        "t": 8.97,
         "label": "Draw tangent at x₁",
         "values": [
           "x_1 = 1.5",
@@ -93,7 +93,7 @@
         ]
       },
       {
-        "t": 11,
+        "t": 11.85,
         "label": "Find zero of tangent line",
         "values": [
           "x_1 = 1.5",
@@ -103,7 +103,7 @@
         ]
       },
       {
-        "t": 12,
+        "t": 12.05,
         "label": "x₂ ≈ √2 (true value 1.41421…)",
         "values": [
           "x_2 \\approx \\sqrt{2}",
@@ -154,7 +154,7 @@
     ],
     "steps": [
       {
-        "t": 3,
+        "t": 4.2,
         "label": "Plot h(x) = cos(x)",
         "values": [
           "\\text{—}",
@@ -164,7 +164,7 @@
         ]
       },
       {
-        "t": 5,
+        "t": 6.07,
         "label": "Plot g(x) = x",
         "values": [
           "\\text{—}",
@@ -174,7 +174,7 @@
         ]
       },
       {
-        "t": 8,
+        "t": 10.05,
         "label": "Create auxiliary function f(x)",
         "values": [
           "\\text{—}",
@@ -184,7 +184,7 @@
         ]
       },
       {
-        "t": 10,
+        "t": 11.05,
         "label": "Pick x₀ = 0.5",
         "values": [
           "x_0 = 0.5",
@@ -194,7 +194,7 @@
         ]
       },
       {
-        "t": 11.4,
+        "t": 11.87,
         "label": "Evaluate f(x₀)",
         "values": [
           "x_0 = 0.5",
@@ -204,7 +204,7 @@
         ]
       },
       {
-        "t": 12.1,
+        "t": 12.83,
         "label": "Draw tangent at x₀",
         "values": [
           "x_0 = 0.5",
@@ -214,7 +214,7 @@
         ]
       },
       {
-        "t": 15.1,
+        "t": 16.2,
         "label": "Find zero of tangent line",
         "values": [
           "x_0 = 0.5",
@@ -224,7 +224,7 @@
         ]
       },
       {
-        "t": 17,
+        "t": 17.95,
         "label": "Draw tangent at x₁",
         "values": [
           "x_1 \\approx 0.755",
@@ -234,7 +234,7 @@
         ]
       },
       {
-        "t": 20,
+        "t": 20.8,
         "label": "Find zero of tangent line",
         "values": [
           "x_1 \\approx 0.755",
@@ -244,7 +244,7 @@
         ]
       },
       {
-        "t": 21,
+        "t": 21.05,
         "label": "x₂ ≈ 0.739",
         "values": [
           "x_2 \\approx 0.739",
@@ -278,7 +278,7 @@
     "legend": [],
     "steps": [
       {
-        "t": 0,
+        "t": 2.07,
         "label": "Tangent line at xₙ",
         "values": [
           "y - f(x_n) = f'(x_n)(x - x_n)",
@@ -286,7 +286,7 @@
         ]
       },
       {
-        "t": 3,
+        "t": 4.07,
         "label": "Set y = 0 and x = xₙ₊₁",
         "values": [
           "0 - f(x_n) = f'(x_n)(x_{n+1} - x_n)",
@@ -294,7 +294,7 @@
         ]
       },
       {
-        "t": 5,
+        "t": 6.07,
         "label": "Divide by f′(xₙ)",
         "values": [
           "-\\frac{f(x_n)}{f'(x_n)} = x_{n+1} - x_n",
@@ -302,7 +302,7 @@
         ]
       },
       {
-        "t": 7,
+        "t": 8.05,
         "label": "Add xₙ to both sides",
         "values": [
           "x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}",
