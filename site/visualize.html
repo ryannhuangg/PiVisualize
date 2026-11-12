@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Math Derivations</title>
+<title>PiVisualize</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,30 +12,8 @@
 </head>
 <body>
 <header>
-  <a class="brand" href="index.html">Math Derivations</a>
-  <nav>
-    <div class="menu">
-      <button>Single Variable</button>
-      <div class="menu-items">
-        <a href="derivation.html?id=newton">Newton's Method</a>
-        <a href="derivation.html?id=newton-derivation">Newton's Method: Derivation</a>
-      </div>
-    </div>
-    <div class="menu">
-      <button>Multivariable</button>
-      <div class="menu-items">
-        <a class="soon" href="#">Cylindrical Coordinates</a>
-        <a class="soon" href="#">Spherical Coordinates</a>
-      </div>
-    </div>
-    <div class="menu">
-      <button>Geometry</button>
-      <div class="menu-items">
-        <a class="soon" href="#">Pythagorean Theorem</a>
-        <a class="soon" href="#">Law of Cosines</a>
-      </div>
-    </div>
-  </nav>
+  <a class="brand" href="index.html"><span class="logo">π</span>PiVisualize</a>
+  <nav id="nav"></nav>
 </header>
 <main>
   <section class="card">
@@ -72,8 +50,10 @@
       <pre><code id="d-pre"></code></pre>
     </div>
   </section>
+  <div id="next-page" class="next"></div>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="nav.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

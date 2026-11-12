@@ -156,13 +156,14 @@ fetch("steps.json")
   .then((json) => {
     data = json;
     const sel = $("animation");
-    const id = new URLSearchParams(location.search).get("id");
+    const id = currentId();
     const first = data[id] ? id : Object.keys(data)[0];
     const group = data[first].group;
     Object.entries(data)
       .filter(([, v]) => v.group === group)
       .forEach(([key, v]) => sel.add(new Option(v.title, key)));
     sel.value = first;
+    history.replaceState(null, "", `?id=${first}`);
     if (sel.options.length < 2) sel.parentElement.style.display = "none";
     sel.addEventListener("change", () => {
       history.replaceState(null, "", `?id=${sel.value}`);

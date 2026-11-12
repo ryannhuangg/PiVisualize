@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Math Derivations</title>
+<title>PiVisualize</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap">
@@ -11,59 +11,16 @@
 </head>
 <body>
 <header>
-  <a class="brand" href="index.html">Math Derivations</a>
-  <nav>
-    <div class="menu">
-      <button>Single Variable</button>
-      <div class="menu-items">
-        <a href="derivation.html?id=newton">Newton's Method</a>
-        <a href="derivation.html?id=newton-derivation">Newton's Method: Derivation</a>
-      </div>
-    </div>
-    <div class="menu">
-      <button>Multivariable</button>
-      <div class="menu-items">
-        <a class="soon" href="#">Cylindrical Coordinates</a>
-        <a class="soon" href="#">Spherical Coordinates</a>
-      </div>
-    </div>
-    <div class="menu">
-      <button>Geometry</button>
-      <div class="menu-items">
-        <a class="soon" href="#">Pythagorean Theorem</a>
-        <a class="soon" href="#">Law of Cosines</a>
-      </div>
-    </div>
-  </nav>
+  <a class="brand" href="index.html"><span class="logo">π</span>PiVisualize</a>
+  <nav id="nav"></nav>
 </header>
 <main>
   <div class="home">
-    <h1>Math Derivations</h1>
-    <p class="subtitle">Step-by-step animated derivations</p>
-    <div class="columns">
-      <section class="column">
-        <h2>Single-Variable Calculus</h2>
-        <h3>Approximation</h3>
-        <details>
-          <summary>Newton's Method</summary>
-          <a href="derivation.html?id=newton">Basic Examples</a>
-          <a href="derivation.html?id=newton-derivation">Derivation</a>
-        </details>
-      </section>
-      <section class="column">
-        <h2>Multivariable Calculus</h2>
-        <h3>Coordinate Systems</h3>
-        <a class="soon" href="#">Cylindrical Coordinates</a>
-        <a class="soon" href="#">Spherical Coordinates</a>
-      </section>
-      <section class="column">
-        <h2>Geometry</h2>
-        <h3>Euclidean</h3>
-        <a class="soon" href="#">Pythagorean Theorem</a>
-        <a class="soon" href="#">Law of Cosines</a>
-      </section>
-    </div>
+    <h1>PiVisualize</h1>
+    <p class="subtitle">Mathematics, Visualized.</p>
+    <div class="columns" id="columns"></div>
   </div>
 </main>
+<script src="nav.js"></script>
 </body>
 </html>

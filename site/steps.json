@@ -263,7 +263,7 @@
   },
   "newton-derivation": {
     "group": "newton-derivation",
-    "title": "Newton's Method: Derivation",
+    "title": "Newton's Method: Update Rule",
     "video": "videos/NewtonDerivation.mp4",
     "cards": [
       {
@@ -311,7 +311,7 @@
       }
     ],
     "discussion": {
-      "title": "Newton's Method: Derivation",
+      "title": "Newton's Method: Update Rule",
       "subtitle": "Tangent Line to Update Rule",
       "text": "Start from the tangent line at $x_n$, ask where it hits $y = 0$, and solve for that $x$. The result is the update rule $x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$."
     }

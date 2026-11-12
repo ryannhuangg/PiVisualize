@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Single-Variable",
+    "title": "Single-Variable Calculus",
+    "groups": [
+      {
+        "name": "Approximation",
+        "topics": [
+          {
+            "name": "Newton's Method",
+            "pages": [
+              { "id": "newton", "label": "Basic Examples" },
+              { "id": "newton-derivation", "label": "Update Rule" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Multivariable",
+    "title": "Multivariable Calculus",
+    "groups": [
+      {
+        "name": "Coordinate Systems",
+        "topics": [
+          { "name": "Cylindrical Coordinates" },
+          { "name": "Spherical Coordinates" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Geometry",
+    "title": "Geometry",
+    "groups": [
+      {
+        "name": "Euclidean",
+        "topics": [
+          { "name": "Pythagorean Theorem" },
+          { "name": "Law of Cosines" }
+        ]
+      }
+    ]
+  }
+]
