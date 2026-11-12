@@ -116,7 +116,7 @@
     "discussion": {
       "title": "Newton's Method",
       "subtitle": "Approximation Methods: Root-Finding",
-      "text": "Newton's method finds a solution of $f(x) = 0$ by repeatedly creating tangent lines, replacing the current guess $x_n$ with the point where the tangent line at $x_n$ crosses the x-axis, $x_{n+1}$. For \"nice\" functions where $f'(x) \\neq 0$, Newton's method will find a root of $f(x)$."
+      "text": "Newton's method finds a solution of $f(x) = 0$ by repeatedly creating tangent lines, replacing the current guess $x_n$ (or arbitrary guess $x_0$) with the point where the tangent line at $x_n$ crosses the x-axis, $x_{n+1}$. For \"nice\" functions where $f'(x) \\neq 0$, Newton's method will find a root of $f(x)$."
     },
     "heading": "Newton's Method: Roots"
   },
