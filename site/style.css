@@ -408,3 +408,27 @@ button.primary {
 .next-link.forward { margin-left: auto; }
 
 .next-link:hover { filter: brightness(1.15); }
+
+@media (max-width: 600px) {
+  header { position: static; flex-wrap: wrap; gap: 4px 16px; padding: 8px 16px; }
+  nav { flex-wrap: wrap; margin-left: -10px; }
+  .menu > button { min-height: 40px; padding: 6px 10px; white-space: nowrap; }
+  .menu:last-child .menu-items { left: auto; right: 0; }
+  main { padding: 16px 12px 24px; gap: 16px; }
+  .card { padding: 16px 12px; }
+  h1 { font-size: 1.6rem; }
+  .card h1 { margin-bottom: 14px; }
+  .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .controls label { justify-content: space-between; grid-column: 1 / -1; }
+  .controls label select { flex: 1; max-width: 220px; }
+  select, button { min-height: 44px; }
+  .card > .stage { height: auto; aspect-ratio: 16 / 9; }
+  .stepnav button { width: 44px; }
+  .cards { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .info { padding: 10px 12px; }
+  .info .value { font-size: 1rem; overflow-x: auto; overflow-y: hidden; }
+  .discussion { padding: 16px; }
+  .column { padding: 20px; }
+  .next { flex-direction: column; gap: 12px; }
+  .next-link, .next-link.forward { margin-left: 0; text-align: center; }
+}

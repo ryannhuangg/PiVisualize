@@ -2,3 +2,5 @@ media/
 .venv/
 **/.DS_STORE
 scenes/__pycache__/
+PRODUCT.md 
+DESIGN.md
