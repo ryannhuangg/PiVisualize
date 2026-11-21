@@ -33,7 +33,8 @@
     ],
     "steps": [
       {
-        "t": 2.02,
+        "t": 1.0,
+        "end": 2.0,
         "label": "Pick x₀ = 2",
         "values": [
           "x_0 = 2",
@@ -43,7 +44,8 @@
         ]
       },
       {
-        "t": 2.97,
+        "t": 2.5,
+        "end": 3.5,
         "label": "Evaluate f(x₀)",
         "values": [
           "x_0 = 2",
@@ -53,7 +55,8 @@
         ]
       },
       {
-        "t": 3.95,
+        "t": 4.0,
+        "end": 5.0,
         "label": "Draw tangent at x₀",
         "values": [
           "x_0 = 2",
@@ -63,7 +66,8 @@
         ]
       },
       {
-        "t": 7.03,
+        "t": 7.5,
+        "end": 8.5,
         "label": "Find zero of tangent line",
         "values": [
           "x_0 = 2",
@@ -73,7 +77,8 @@
         ]
       },
       {
-        "t": 7.82,
+        "t": 9.0,
+        "end": 10.0,
         "label": "Evaluate f(x₁)",
         "values": [
           "x_1 = 1.5",
@@ -83,7 +88,8 @@
         ]
       },
       {
-        "t": 8.97,
+        "t": 10.5,
+        "end": 11.5,
         "label": "Draw tangent at x₁",
         "values": [
           "x_1 = 1.5",
@@ -93,7 +99,8 @@
         ]
       },
       {
-        "t": 11.85,
+        "t": 14.0,
+        "end": 15.0,
         "label": "Find zero of tangent line",
         "values": [
           "x_1 = 1.5",
@@ -103,7 +110,8 @@
         ]
       },
       {
-        "t": 12.05,
+        "t": 16.5,
+        "end": 17.5,
         "label": "x₂ ≈ √2 (true value 1.41421…)",
         "values": [
           "x_2 \\approx \\sqrt{2}",
@@ -154,7 +162,8 @@
     ],
     "steps": [
       {
-        "t": 4.2,
+        "t": 3.0,
+        "end": 4.0,
         "label": "Plot h(x) = cos(x)",
         "values": [
           "\\text{—}",
@@ -164,7 +173,8 @@
         ]
       },
       {
-        "t": 6.07,
+        "t": 5.5,
+        "end": 6.5,
         "label": "Plot g(x) = x",
         "values": [
           "\\text{—}",
@@ -174,7 +184,8 @@
         ]
       },
       {
-        "t": 10.05,
+        "t": 9.0,
+        "end": 11.0,
         "label": "Create auxiliary function f(x)",
         "values": [
           "\\text{—}",
@@ -184,7 +195,8 @@
         ]
       },
       {
-        "t": 11.05,
+        "t": 11.5,
+        "end": 12.5,
         "label": "Pick x₀ = 0.5",
         "values": [
           "x_0 = 0.5",
@@ -194,7 +206,8 @@
         ]
       },
       {
-        "t": 11.87,
+        "t": 13.0,
+        "end": 14.0,
         "label": "Evaluate f(x₀)",
         "values": [
           "x_0 = 0.5",
@@ -204,7 +217,8 @@
         ]
       },
       {
-        "t": 12.83,
+        "t": 14.5,
+        "end": 15.5,
         "label": "Draw tangent at x₀",
         "values": [
           "x_0 = 0.5",
@@ -214,7 +228,8 @@
         ]
       },
       {
-        "t": 16.2,
+        "t": 18.0,
+        "end": 19.0,
         "label": "Find zero of tangent line",
         "values": [
           "x_0 = 0.5",
@@ -224,7 +239,8 @@
         ]
       },
       {
-        "t": 17.95,
+        "t": 21.0,
+        "end": 22.0,
         "label": "Draw tangent at x₁",
         "values": [
           "x_1 \\approx 0.755",
@@ -234,7 +250,8 @@
         ]
       },
       {
-        "t": 20.8,
+        "t": 24.5,
+        "end": 25.5,
         "label": "Find zero of tangent line",
         "values": [
           "x_1 \\approx 0.755",
@@ -244,7 +261,8 @@
         ]
       },
       {
-        "t": 21.05,
+        "t": 27.0,
+        "end": 28.0,
         "label": "x₂ ≈ 0.739",
         "values": [
           "x_2 \\approx 0.739",
@@ -278,7 +296,8 @@
     "legend": [],
     "steps": [
       {
-        "t": 2.07,
+        "t": 0.1,
+        "end": 2.0,
         "label": "Tangent line at xₙ",
         "values": [
           "y - f(x_n) = f'(x_n)(x - x_n)",
@@ -286,7 +305,8 @@
         ]
       },
       {
-        "t": 4.07,
+        "t": 3.5,
+        "end": 4.5,
         "label": "Set y = 0 and x = xₙ₊₁",
         "values": [
           "0 - f(x_n) = f'(x_n)(x_{n+1} - x_n)",
@@ -294,7 +314,8 @@
         ]
       },
       {
-        "t": 6.07,
+        "t": 6.0,
+        "end": 7.0,
         "label": "Divide by f′(xₙ)",
         "values": [
           "-\\frac{f(x_n)}{f'(x_n)} = x_{n+1} - x_n",
@@ -302,7 +323,8 @@
         ]
       },
       {
-        "t": 8.05,
+        "t": 8.5,
+        "end": 9.5,
         "label": "Add xₙ to both sides",
         "values": [
           "x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}",
@@ -314,6 +336,375 @@
       "title": "Newton's Method: Update Rule",
       "subtitle": "Tangent Line to Update Rule",
       "text": "Start from the tangent line at $x_n$, ask where it hits $y = 0$, and solve for that $x$. The result is the update rule $x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$."
+    }
+  },
+  "newton-pitfalls": {
+    "group": "newton-pitfalls",
+    "title": "Wrong Root",
+    "heading": "Newton's Method: Wrong Root",
+    "video": "videos/NewtonPF1.mp4",
+    "cards": [
+      {
+        "label": "Current guess",
+        "math": true
+      },
+      {
+        "label": "f(guess)",
+        "math": true
+      },
+      {
+        "label": "Slope f'(guess)",
+        "math": true
+      },
+      {
+        "label": "Next guess",
+        "math": true
+      }
+    ],
+    "legend": [
+      {
+        "color": "#4a6ae0",
+        "name": "f(x)"
+      },
+      {
+        "color": "#7260d6",
+        "name": "Tangent line"
+      },
+      {
+        "color": "#72a0ff",
+        "name": "Roots"
+      }
+    ],
+    "steps": [
+      {
+        "t": 1.5,
+        "end": 3.1,
+        "label": "Roots at x = −1, 0, 1",
+        "values": [
+          "\\text{roots: } -1,\\ 0,\\ 1",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 4.6,
+        "end": 5.6,
+        "label": "Pick x₀ = 0.5",
+        "values": [
+          "x_0 = 0.5",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 6.1,
+        "end": 7.1,
+        "label": "Evaluate f(x₀)",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) = -0.375",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 7.6,
+        "end": 8.6,
+        "label": "Draw tangent at x₀",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) = -0.375",
+          "f'(x_0) = -0.25",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 9.1,
+        "end": 10.1,
+        "label": "Find zero of tangent line",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) = -0.375",
+          "f'(x_0) = -0.25",
+          "x_1 = -1"
+        ]
+      },
+      {
+        "t": 11.6,
+        "end": 13.6,
+        "label": "Converged to −1, not the nearest root",
+        "values": [
+          "x_1 = -1",
+          "f(x_1) = 0",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      }
+    ],
+    "discussion": {
+      "title": "Newton's Method",
+      "subtitle": "Pitfalls: Converging to the Wrong Root",
+      "text": "Newton's method converges to a root, not necessarily the closest one. Starting at $x_0 = 0.5$ on $f(x) = x^3 - x$, the tangent is shallow ($f'(x_0) = -0.25$), so the step $-\\frac{f(x_0)}{f'(x_0)} = -1.5$ throws the guess past $0$ straight to $x_1 = -1$. A flat tangent means a big jump, and a big jump can land in another root's basin."
+    }
+  },
+  "newton-pitfalls-2": {
+    "group": "newton-pitfalls",
+    "title": "Zero Slope",
+    "heading": "Newton's Method: Zero Slope",
+    "video": "videos/NewtonPF2.mp4",
+    "cards": [
+      {
+        "label": "Current guess",
+        "math": true
+      },
+      {
+        "label": "f(guess)",
+        "math": true
+      },
+      {
+        "label": "Slope f'(guess)",
+        "math": true
+      },
+      {
+        "label": "Next guess",
+        "math": true
+      }
+    ],
+    "legend": [
+      {
+        "color": "#4a6ae0",
+        "name": "f(x)"
+      },
+      {
+        "color": "#7260d6",
+        "name": "Tangent line"
+      }
+    ],
+    "steps": [
+      {
+        "t": 1.5,
+        "end": 2.5,
+        "label": "Pick x₀ = 0",
+        "values": [
+          "x_0 = 0",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 3.0,
+        "end": 4.0,
+        "label": "Evaluate f(x₀)",
+        "values": [
+          "x_0 = 0",
+          "f(x_0) = -1",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 4.5,
+        "end": 5.5,
+        "label": "Draw tangent at x₀",
+        "values": [
+          "x_0 = 0",
+          "f(x_0) = -1",
+          "f'(x_0) = 0",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 6.0,
+        "end": 8.0,
+        "label": "Apply the update rule",
+        "values": [
+          "x_0 = 0",
+          "f(x_0) = -1",
+          "f'(x_0) = 0",
+          "x_1 = 0 - \\frac{-1}{0}"
+        ]
+      },
+      {
+        "t": 9.5,
+        "end": 11.5,
+        "label": "Division by zero: no x₁",
+        "values": [
+          "x_0 = 0",
+          "f(x_0) = -1",
+          "f'(x_0) = 0",
+          "\\text{undefined}"
+        ]
+      }
+    ],
+    "discussion": {
+      "title": "Newton's Method",
+      "subtitle": "Pitfalls: Zero Slope",
+      "text": "The update rule divides by $f'(x_n)$. At $x_0 = 0$ on $f(x) = x^2 - 1$, $f'(x_0) = 0$, so the tangent is horizontal and never meets the x-axis. $x_1$ is undefined, and guesses near a stationary point have the same problem in a milder form: a tiny slope sends $x_1$ very far away."
+    }
+  },
+  "newton-pitfalls-3": {
+    "group": "newton-pitfalls",
+    "title": "Divergence",
+    "heading": "Newton's Method: Divergence",
+    "video": "videos/NewtonPF3.mp4",
+    "cards": [
+      {
+        "label": "Current guess",
+        "math": true
+      },
+      {
+        "label": "f(guess)",
+        "math": true
+      },
+      {
+        "label": "Slope f'(guess)",
+        "math": true
+      },
+      {
+        "label": "Next guess",
+        "math": true
+      }
+    ],
+    "legend": [
+      {
+        "color": "#4a6ae0",
+        "name": "f(x)"
+      },
+      {
+        "color": "#7260d6",
+        "name": "Tangent line"
+      }
+    ],
+    "steps": [
+      {
+        "t": 1.5,
+        "end": 2.5,
+        "label": "Pick x₀ = 0.5",
+        "values": [
+          "x_0 = 0.5",
+          "\\text{—}",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 3.0,
+        "end": 4.0,
+        "label": "Evaluate f(x₀)",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) \\approx 0.794",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 4.5,
+        "end": 5.5,
+        "label": "Draw tangent at x₀",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) \\approx 0.794",
+          "f'(x_0) \\approx 0.529",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 6.0,
+        "end": 7.0,
+        "label": "Find zero of tangent line",
+        "values": [
+          "x_0 = 0.5",
+          "f(x_0) \\approx 0.794",
+          "f'(x_0) \\approx 0.529",
+          "x_1 = -1"
+        ]
+      },
+      {
+        "t": 7.5,
+        "end": 8.5,
+        "label": "Evaluate f(x₁)",
+        "values": [
+          "x_1 = -1",
+          "f(x_1) \\approx -1",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 9.0,
+        "end": 10.0,
+        "label": "Draw tangent at x₁",
+        "values": [
+          "x_1 = -1",
+          "f(x_1) \\approx -1",
+          "f'(x_1) \\approx 0.333",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 10.5,
+        "end": 11.5,
+        "label": "Find zero of tangent line",
+        "values": [
+          "x_1 = -1",
+          "f(x_1) \\approx -1",
+          "f'(x_1) \\approx 0.333",
+          "x_2 = 2"
+        ]
+      },
+      {
+        "t": 12.0,
+        "end": 13.0,
+        "label": "Evaluate f(x₂)",
+        "values": [
+          "x_2 = 2",
+          "f(x_2) \\approx 1.260",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 13.5,
+        "end": 14.5,
+        "label": "Draw tangent at x₂",
+        "values": [
+          "x_2 = 2",
+          "f(x_2) \\approx 1.260",
+          "f'(x_2) \\approx 0.210",
+          "\\text{—}"
+        ]
+      },
+      {
+        "t": 15.0,
+        "end": 16.0,
+        "label": "Find zero of tangent line",
+        "values": [
+          "x_2 = 2",
+          "f(x_2) \\approx 1.260",
+          "f'(x_2) \\approx 0.210",
+          "x_3 = -4"
+        ]
+      },
+      {
+        "t": 17.5,
+        "end": 19.5,
+        "label": "Each step doubles the distance from 0",
+        "values": [
+          "x_{n+1} = -2x_n",
+          "|x_n| \\to \\infty",
+          "\\text{—}",
+          "\\text{—}"
+        ]
+      }
+    ],
+    "discussion": {
+      "title": "Newton's Method",
+      "subtitle": "Pitfalls: Divergence",
+      "text": "For $f(x) = x^{1/3}$ the only root is $x = 0$, but the update rule simplifies to $x_{n+1} = x_n - \\frac{x_n^{1/3}}{\\frac{1}{3}x_n^{-2/3}} = -2x_n$. Every iteration flips sides and doubles the distance from the root, so the guesses $0.5, -1, 2, -4, \\dots$ diverge no matter where you start (except exactly at $0$). The culprit is $f'(x) \\to \\infty$ near the root."
     }
   }
 }

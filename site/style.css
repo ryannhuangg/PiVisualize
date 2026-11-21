@@ -21,7 +21,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 header {
@@ -309,7 +309,7 @@ button.primary {
 }
 
 .code pre { margin: 0; overflow-x: auto; }
-.code code { font: 0.9rem/1.6 "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+.code code { font: 0.9rem/1.6 "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; }
 .code button { position: absolute; top: 10px; right: 10px; padding: 4px 10px; font-size: 0.8rem; }
 
 .home {

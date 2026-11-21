@@ -101,10 +101,11 @@ function load(id) {
 function go(delta) {
   const cur = stepIndex(video.currentTime);
   let k = cur + delta;
-  if (delta < 0 && cur >= 0 && video.currentTime - steps[cur].t > 0.3) k = cur;
+  const end = (s) => s.end ?? s.t;
+  if (delta < 0 && cur >= 0 && video.currentTime > end(steps[cur]) + 0.3) k = cur;
   k = Math.min(Math.max(k, -1), steps.length - 1);
   video.pause();
-  video.currentTime = k < 0 ? 0 : steps[k].t;
+  video.currentTime = k < 0 ? 0 : end(steps[k]);
 }
 
 function tick() {
