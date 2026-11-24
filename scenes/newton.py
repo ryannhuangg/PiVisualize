@@ -1,8 +1,8 @@
 from manim import *
 
-CURVE = "#4a6ae0"
-TANGENT = "#7260d6"
-AUX_CURVE = "#72a0ff"
+CURVE = "#b488ff"
+TANGENT = "#d1b6f0"
+AUX_CURVE = "#93928c"
 PAUSE = 1.5
 BEAT = 0.5
 

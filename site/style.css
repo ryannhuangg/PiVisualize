@@ -1,12 +1,13 @@
 :root {
   color-scheme: dark;
-  --bg: #080a16;
-  --panel: #0e1122;
-  --card: #141830;
-  --border: #1f2447;
-  --text: #dfe2f4;
-  --muted: #7f86b2;
-  --accent: #7260d6;
+  --bg: #182029;
+  --panel: #1f2a36;
+  --card: #293848;
+  --border: #3b4f63;
+  --text: #f0eee4;
+  --muted: #93928c;
+  --accent: #745ea1;
+  --accent-hi: #b488ff;
   --radius: 6px;
   --gap: clamp(14px, 3.5vh, 28px);
 }
@@ -55,9 +56,9 @@ header {
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #5b34c4, #1a2a84);
-  box-shadow: 0 0 0 1px rgba(114, 96, 214, 0.35);
-  color: #fff;
+  background: linear-gradient(135deg, #745ea1, #3b4f63);
+  box-shadow: 0 0 0 1px rgba(180, 136, 255, 0.35);
+  color: #f0eee4;
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1;
@@ -182,7 +183,7 @@ select, button {
 select { field-sizing: content; }
 
 button { cursor: pointer; font-weight: 600; }
-button:hover { border-color: var(--accent); }
+button:hover { border-color: var(--accent-hi); }
 
 button.primary {
   background: var(--accent);
@@ -282,7 +283,7 @@ button.primary {
 #bar {
   width: 0;
   height: 100%;
-  background: var(--accent);
+  background: var(--accent-hi);
 }
 
 .discussion {

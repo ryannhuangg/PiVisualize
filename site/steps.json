@@ -23,11 +23,11 @@
     ],
     "legend": [
       {
-        "color": "#4a6ae0",
+        "color": "#b488ff",
         "name": "f(x)"
       },
       {
-        "color": "#7260d6",
+        "color": "#d1b6f0",
         "name": "Tangent line"
       }
     ],
@@ -152,11 +152,11 @@
     ],
     "legend": [
       {
-        "color": "#72a0ff",
+        "color": "#93928c",
         "name": "f(x)"
       },
       {
-        "color": "#7260d6",
+        "color": "#d1b6f0",
         "name": "Tangent line"
       }
     ],
@@ -363,15 +363,15 @@
     ],
     "legend": [
       {
-        "color": "#4a6ae0",
+        "color": "#b488ff",
         "name": "f(x)"
       },
       {
-        "color": "#7260d6",
+        "color": "#d1b6f0",
         "name": "Tangent line"
       },
       {
-        "color": "#72a0ff",
+        "color": "#93928c",
         "name": "Roots"
       }
     ],
@@ -474,11 +474,11 @@
     ],
     "legend": [
       {
-        "color": "#4a6ae0",
+        "color": "#b488ff",
         "name": "f(x)"
       },
       {
-        "color": "#7260d6",
+        "color": "#d1b6f0",
         "name": "Tangent line"
       }
     ],
@@ -570,11 +570,11 @@
     ],
     "legend": [
       {
-        "color": "#4a6ae0",
+        "color": "#b488ff",
         "name": "f(x)"
       },
       {
-        "color": "#7260d6",
+        "color": "#d1b6f0",
         "name": "Tangent line"
       }
     ],
